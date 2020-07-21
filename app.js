@@ -22,16 +22,23 @@ app.get("/", function(req, res){
   });
 });
 
+//render about route
+app.get("/about", function(req, res){
+  res.render("about", {
+    aboutContent: aboutContent,
+  });
+});
+
+//render contact route
+app.get("/contact", function(req, res){
+  res.render("contact", {
+    contactContent: contactContent,
+  });
+});
 
 
 
-
-
-
-
-
-
-
+//open port; run local server
 app.listen(3000, function() {
   console.log("Server started on port 3000");
 });
