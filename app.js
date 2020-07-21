@@ -22,6 +22,7 @@ app.use(express.static("public"));
 app.get("/", function(req, res){
   res.render("home", {
     homeStartingContent: homeStartingContent,
+    posts: posts
   });
 });
 
@@ -45,7 +46,7 @@ app.get("/compose", function(req, res){
 });
 
 app.post("/compose", function(req, res){
-  
+
   const post = {
     title: req.body.postTitle,
     content: req.body.postContent
