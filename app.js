@@ -36,6 +36,11 @@ app.get("/contact", function(req, res){
   });
 });
 
+//render compose page
+app.get("/compose", function(req, res){
+  res.render("compose");
+});
+
 
 
 //open port; run local server
