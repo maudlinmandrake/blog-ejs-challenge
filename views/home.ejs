@@ -4,11 +4,9 @@
 
 <p><%= homeStartingContent %></p>
 
-    <% for (i = 0; i<posts.length; i++) { %>
-        <div class="blogPost">
-            <h2><%= title[i] %></h2>
-            <%= content[i] %>
-        </div>
-    <% } %>
+<% posts.forEach(function(post){ %>
+<%    console.log(posts[i].title); %>
+<% }); %>
+
 
 <%- include("partials/footer") -%> 
