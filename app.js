@@ -49,7 +49,7 @@ app.get("/compose", function(req, res){
 //generate dynamic URL for each blog post
 app.get("/posts/:title", function(req, res){
 
-  const requestedTitle = (req.params.title);
+  const requestedTitle = _.lowerCase(req.params.title);
 
   posts.forEach(function(post){
 
