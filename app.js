@@ -45,6 +45,11 @@ app.get("/compose", function(req, res){
   res.render("compose");
 });
 
+//generate dynamic URL for each blog post
+app.get("/posts/:title", function(req, res){
+  console.log(req.params.title);
+});
+
 app.post("/compose", function(req, res){
 
   const post = {
