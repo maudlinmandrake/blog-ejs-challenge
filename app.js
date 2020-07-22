@@ -52,14 +52,14 @@ app.get("/posts/:title", function(req, res){
 
   posts.forEach(function(post){
 
-    const storedTitle = post.title
+    const storedTitle = post.title;
 
     if (requestedTitle === storedTitle){
       console.log("Match found!");
     } else {
       console.log("No match found!");
     }
-    
+
   });
 
 });
