@@ -47,14 +47,19 @@ app.get("/compose", function(req, res){
 
 //generate dynamic URL for each blog post
 app.get("/posts/:title", function(req, res){
+
   const requestedTitle = (req.params.title);
 
   posts.forEach(function(post){
-    if (requestedTitle === post.title){
+
+    const storedTitle = post.title
+
+    if (requestedTitle === storedTitle){
       console.log("Match found!");
     } else {
       console.log("No match found!");
     }
+    
   });
 
 });
